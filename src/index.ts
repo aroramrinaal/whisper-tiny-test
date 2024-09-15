@@ -4,7 +4,7 @@ const app = new Hono<{ Bindings: CloudflareBindings }>()
 
 app.get('/', async(c) => {
   const res = await fetch(
-    "https://github.com/Azure-Samples/cognitive-services-speech-sdk/raw/master/samples/cpp/windows/console/samples/enrollment_audio_katie.wav"
+    "https://github.com/aroramrinaal/whisper-tiny-test/blob/master/audio/ResumeIntro.wav"
   );
   const blob = await res.arrayBuffer();
 
