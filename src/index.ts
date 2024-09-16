@@ -1,6 +1,10 @@
 import { Hono } from 'hono'
+import { cors } from 'hono/cors'
 
 const app = new Hono<{ Bindings: CloudflareBindings }>()
+
+// Enable CORS for all routes
+app.use('*', cors())
 
 app.post('/transcribe', async (c) => {
   
