@@ -17,7 +17,6 @@ app.post('/transcribe', async (c) => {
     audio: [...new Uint8Array(arrayBuffer)],
   };
 
-
   try{
   const response = await c.env.AI.run(
     "@cf/openai/whisper-tiny-en",
